@@ -216,7 +216,7 @@ function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-[10s]"
         style={{
-          backgroundImage: `url(https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/94003643-edaf-4a20-b71a-f2ba5e90b42f.jpg)`,
+          backgroundImage: `url(https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg)`,
         }}
       />
       <div
@@ -241,7 +241,7 @@ function Hero() {
           Анапа · Первая линия · У моря
         </p>
         <h1
-          className="font-brand text-8xl sm:text-9xl font-bold italic text-white mb-3 animate-fade-in-up"
+          className="font-brand text-8xl sm:text-9xl text-white mb-3 animate-fade-in-up"
           style={{ lineHeight: 1.1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           ЛаБриз
