@@ -9,7 +9,7 @@ const EVENTS = [
     title: "Live Cover Band",
     date: "20 июня",
     time: "20:00",
-    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/8d155e98-51b8-4646-8c49-b47323c3c8c6.jpg",
+    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5dbaaf80-b935-494b-816b-68c4e40539fd.jpg",
     description: "Живые выступления любимых хитов 80–2000-х. Зажигательная атмосфера у самого моря.",
     tag: "Живая музыка",
   },
@@ -18,7 +18,7 @@ const EVENTS = [
     title: "Karaoke Night",
     date: "22 июня",
     time: "19:00",
-    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/fc08de35-3036-4e9d-9e61-13a0ac3d1b7d.jpg",
+    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/6b08763e-92c9-4e82-862f-d03bb2b35b8e.jpg",
     description: "Профессиональный звук, ведущий и огромная база песен. Звезда вечера — ты.",
     tag: "Караоке",
   },
@@ -27,7 +27,7 @@ const EVENTS = [
     title: "Закатный вечер",
     date: "25 июня",
     time: "18:30",
-    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/93f7428a-99cf-4e24-8129-f2f9e87c8e70.jpg",
+    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg",
     description: "Особый вечер с живой музыкой под открытым небом и видом на море в момент заката.",
     tag: "Специальное",
   },
@@ -61,10 +61,14 @@ const MENU = [
 ];
 
 const GALLERY = [
-  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/93f7428a-99cf-4e24-8129-f2f9e87c8e70.jpg", alt: "Вид на море с террасы", tall: true },
-  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/fc08de35-3036-4e9d-9e61-13a0ac3d1b7d.jpg", alt: "Интерьер ресторана", tall: false },
-  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/8d155e98-51b8-4646-8c49-b47323c3c8c6.jpg", alt: "Живое выступление", tall: false },
-  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/9720e48e-42e0-4961-a703-e2fe8655f670.jpg", alt: "Блюда и коктейли", tall: true },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg", alt: "Закат с террасы", tall: true },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/8b5b213e-c203-4b8b-af5d-07fcd068a06e.jpg", alt: "Летняя терраса", tall: false },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5edfb41e-05ac-444b-a855-ebc3d0bf5b30.jpg", alt: "Вечерний зал", tall: false },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/a2282e95-267e-4722-a854-2bd8cda71614.jpg", alt: "Блюда ЛаБриз", tall: true },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/75d18a04-72c5-433c-8fd8-4eadf7209248.jpg", alt: "Коктейли", tall: false },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/86ea65a4-ecf9-48b5-ade4-738ee283fbbe.jpg", alt: "Еда и напитки", tall: false },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/b0a2583b-4afd-49d0-9f5f-4d7197ed7129.jpg", alt: "Атмосфера заведения", tall: true },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/607b67cb-27cd-4778-a055-6ed6ad4ce22d.jpg", alt: "Вывеска Karaoke", tall: false },
 ];
 
 // ─── SCROLL REVEAL HOOK ──────────────────────────────────────────────────────
@@ -119,18 +123,22 @@ function Navbar() {
       }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2.5">
+        <a href="#hero" className="flex items-center gap-2">
+          <img
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/44108950-5073-47a9-811c-9c28a405c25b.jpg"
+            alt="ЛаБриз"
+            className="rounded-full object-cover transition-all duration-300"
+            style={{
+              width: scrolled ? 44 : 50,
+              height: scrolled ? 44 : 50,
+              boxShadow: scrolled ? "none" : "0 2px 16px rgba(0,0,0,0.25)",
+            }}
+          />
           <span
-            className="font-display text-2xl font-semibold tracking-wide transition-colors duration-300"
+            className="hidden sm:block font-display text-xl font-semibold tracking-wide transition-colors duration-300"
             style={{ color: scrolled ? "var(--sea)" : "white" }}
           >
             ЛаБриз
-          </span>
-          <span
-            className="hidden sm:block font-body text-xs tracking-[0.3em] uppercase transition-colors duration-300"
-            style={{ color: scrolled ? "var(--gold)" : "rgba(255,255,255,0.65)" }}
-          >
-            Анапа
           </span>
         </a>
 
@@ -209,7 +217,7 @@ function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-[10s]"
         style={{
-          backgroundImage: `url(https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/93f7428a-99cf-4e24-8129-f2f9e87c8e70.jpg)`,
+          backgroundImage: `url(https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg)`,
         }}
       />
       <div
@@ -335,7 +343,7 @@ function About() {
             style={{ boxShadow: "0 40px 90px rgba(26,58,92,0.18)" }}
           >
             <img
-              src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/fc08de35-3036-4e9d-9e61-13a0ac3d1b7d.jpg"
+              src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/6b08763e-92c9-4e82-862f-d03bb2b35b8e.jpg"
               alt="Интерьер ЛаБриз"
               className="w-full object-cover"
               style={{ height: 500 }}
@@ -447,7 +455,7 @@ function Karaoke() {
             style={{ boxShadow: "0 40px 90px rgba(26,58,92,0.15)" }}
           >
             <img
-              src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/files/8d155e98-51b8-4646-8c49-b47323c3c8c6.jpg"
+              src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5dbaaf80-b935-494b-816b-68c4e40539fd.jpg"
               alt="Живое выступление"
               className="w-full object-cover"
               style={{ height: 540 }}
@@ -912,11 +920,19 @@ function Footer() {
   return (
     <footer style={{ backgroundColor: "var(--sea)" }} className="py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <p className="font-display text-2xl font-light text-white">ЛаБриз</p>
-          <p className="font-body text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.38)" }}>
-            Вкус заката у моря
-          </p>
+        <div className="flex items-center gap-3">
+          <img
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/44108950-5073-47a9-811c-9c28a405c25b.jpg"
+            alt="ЛаБриз"
+            className="w-12 h-12 rounded-full object-cover"
+            style={{ opacity: 0.9 }}
+          />
+          <div>
+            <p className="font-display text-2xl font-light text-white">ЛаБриз</p>
+            <p className="font-body text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.38)" }}>
+              Вкус заката у моря
+            </p>
+          </div>
         </div>
         <p className="font-body text-xs text-center" style={{ color: "rgba(255,255,255,0.28)" }}>
           © 2024 ЛаБриз · Анапа, Набережная улица, 34
