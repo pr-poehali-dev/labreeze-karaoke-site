@@ -134,7 +134,7 @@ function Navbar() {
             }}
           />
           <span
-            className="hidden sm:block font-display text-xl font-semibold tracking-wide transition-colors duration-300"
+            className="hidden sm:block font-brand text-xl transition-colors duration-300"
             style={{ color: scrolled ? "var(--sea)" : "white" }}
           >
             ЛаБриз
@@ -241,8 +241,8 @@ function Hero() {
           Анапа · Первая линия · У моря
         </p>
         <h1
-          className="font-display text-8xl sm:text-9xl font-light text-white mb-3 animate-fade-in-up"
-          style={{ lineHeight: 1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
+          className="font-brand text-8xl sm:text-9xl text-white mb-3 animate-fade-in-up"
+          style={{ lineHeight: 1.1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           ЛаБриз
         </h1>
@@ -926,7 +926,7 @@ function Footer() {
             className="w-14 h-14 object-contain"
           />
           <div>
-            <p className="font-display text-2xl font-light text-white">ЛаБриз</p>
+            <p className="font-brand text-2xl text-white">ЛаБриз</p>
             <p className="font-body text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.38)" }}>
               Вкус заката у моря
             </p>
