@@ -125,7 +125,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2">
           <img
-            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/4c58fe6b-e2ab-457c-9d62-07f338737bdc.png"
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/06c0b432-0a15-44b7-8ab1-8f830beee38f.png"
             alt="ЛаБриз"
             className="object-contain transition-all duration-300"
             style={{
@@ -921,7 +921,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <img
-            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/4c58fe6b-e2ab-457c-9d62-07f338737bdc.png"
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/06c0b432-0a15-44b7-8ab1-8f830beee38f.png"
             alt="ЛаБриз"
             className="w-14 h-14 object-contain"
           />
