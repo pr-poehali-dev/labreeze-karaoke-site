@@ -241,7 +241,7 @@ function Hero() {
           Анапа · Первая линия · У моря
         </p>
         <h1
-          className="font-brand text-8xl sm:text-9xl text-white mb-3 animate-fade-in-up"
+          className="font-brand text-8xl sm:text-9xl font-bold italic text-white mb-3 animate-fade-in-up"
           style={{ lineHeight: 1.1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           ЛаБриз

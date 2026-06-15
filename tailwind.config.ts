@@ -22,7 +22,7 @@ export default {
 			fontFamily: {
 				display: ['Cormorant Garamond', 'serif'],
 				body: ['Golos Text', 'sans-serif'],
-				brand: ['Pacifico', 'cursive'],
+				brand: ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
