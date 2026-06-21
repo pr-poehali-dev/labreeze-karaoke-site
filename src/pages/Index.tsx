@@ -496,8 +496,20 @@ function Karaoke() {
 
 // ─── MENU ─────────────────────────────────────────────────────────────────────
 
+const MENU_IMAGES = [
+  {
+    label: "Кухня",
+    images: [
+      "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5d12ebeb-dd54-4af4-9d1f-a21a76b9c330.jpeg",
+      "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/823712a2-62a7-42d0-b4a8-807f74eff3dd.jpeg",
+    ],
+  },
+];
+
 function Menu() {
   const [activeTab, setActiveTab] = useState(0);
+  const [menuMode, setMenuMode] = useState<"cards" | "images">("cards");
+  const [activeImageMenu, setActiveImageMenu] = useState(0);
 
   return (
     <section id="menu" style={{ backgroundColor: "var(--sea)" }} className="py-28 px-6">
@@ -512,44 +524,95 @@ function Menu() {
           <div className="gold-divider mx-auto mt-6" />
         </div>
 
-        <div className="flex justify-center gap-2 flex-wrap mb-12 reveal">
-          {MENU.map((cat, i) => (
-            <button
-              key={cat.category}
-              onClick={() => setActiveTab(i)}
-              className="font-body text-sm px-6 py-2.5 rounded-full transition-all duration-300"
-              style={
-                activeTab === i
-                  ? { backgroundColor: "var(--gold)", color: "#1a2533", fontWeight: 600 }
-                  : { backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.6)" }
-              }
-            >
-              {cat.category}
-            </button>
-          ))}
+        {/* Переключатель режима */}
+        <div className="flex justify-center gap-3 mb-10 reveal">
+          <button
+            onClick={() => setMenuMode("cards")}
+            className="font-body text-sm px-6 py-2.5 rounded-full transition-all duration-300"
+            style={menuMode === "cards" ? { backgroundColor: "var(--gold)", color: "#1a2533", fontWeight: 600 } : { backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.6)" }}
+          >
+            Популярное
+          </button>
+          <button
+            onClick={() => setMenuMode("images")}
+            className="font-body text-sm px-6 py-2.5 rounded-full transition-all duration-300"
+            style={menuMode === "images" ? { backgroundColor: "var(--gold)", color: "#1a2533", fontWeight: 600 } : { backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.6)" }}
+          >
+            Полное меню
+          </button>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {MENU[activeTab].items.map((item, i) => (
-            <div
-              key={item.name}
-              className="reveal card-hover rounded-2xl p-6"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.07)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                animationDelay: `${i * 0.1}s`,
-              }}
-            >
-              <h3 className="font-display text-xl font-medium text-white mb-1">{item.name}</h3>
-              <p className="font-body text-xs leading-relaxed mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
-                {item.desc}
-              </p>
-              <p className="font-display text-2xl font-semibold" style={{ color: "var(--gold)" }}>
-                {item.price.toLocaleString("ru-RU")} ₽
-              </p>
+        {menuMode === "cards" && (
+          <>
+            <div className="flex justify-center gap-2 flex-wrap mb-12 reveal">
+              {MENU.map((cat, i) => (
+                <button
+                  key={cat.category}
+                  onClick={() => setActiveTab(i)}
+                  className="font-body text-sm px-6 py-2.5 rounded-full transition-all duration-300"
+                  style={
+                    activeTab === i
+                      ? { backgroundColor: "rgba(255,255,255,0.18)", color: "white", fontWeight: 600 }
+                      : { backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.5)" }
+                  }
+                >
+                  {cat.category}
+                </button>
+              ))}
             </div>
-          ))}
-        </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {MENU[activeTab].items.map((item, i) => (
+                <div
+                  key={item.name}
+                  className="reveal card-hover rounded-2xl p-6"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.07)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    animationDelay: `${i * 0.1}s`,
+                  }}
+                >
+                  <h3 className="font-display text-xl font-medium text-white mb-1">{item.name}</h3>
+                  <p className="font-body text-xs leading-relaxed mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
+                    {item.desc}
+                  </p>
+                  <p className="font-display text-2xl font-semibold" style={{ color: "var(--gold)" }}>
+                    {item.price.toLocaleString("ru-RU")} ₽
+                  </p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {menuMode === "images" && (
+          <div className="reveal">
+            <div className="flex justify-center gap-3 mb-8">
+              {MENU_IMAGES[0].images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveImageMenu(i)}
+                  className="font-body text-sm px-6 py-2.5 rounded-full transition-all duration-300"
+                  style={
+                    activeImageMenu === i
+                      ? { backgroundColor: "rgba(255,255,255,0.18)", color: "white", fontWeight: 600 }
+                      : { backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.5)" }
+                  }
+                >
+                  {i === 0 ? "Основное меню" : "Пицца и детское"}
+                </button>
+              ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={MENU_IMAGES[0].images[activeImageMenu]}
+                alt="Меню ЛаБриз"
+                className="w-full h-auto"
+                style={{ display: "block" }}
+              />
+            </div>
+          </div>
+        )}
 
         <p className="text-center mt-10 font-body text-sm" style={{ color: "rgba(255,255,255,0.3)" }}>
           Полное меню доступно в ресторане и у администратора
