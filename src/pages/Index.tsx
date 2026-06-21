@@ -353,7 +353,7 @@ function About() {
             style={{ backgroundColor: "var(--gold)", color: "#1a2533" }}
           >
             <p className="font-body text-xs font-semibold uppercase tracking-wider">Открыто сейчас</p>
-            <p className="font-display text-xl font-semibold mt-0.5">12:00 — 02:00</p>
+            <p className="font-display text-xl font-semibold mt-0.5">11:00 — 03:00</p>
           </div>
         </div>
       </div>
@@ -719,7 +719,7 @@ function Booking() {
                 {[
                   { icon: "MapPin", text: "Анапа, Набережная улица, 34" },
                   { icon: "Phone", text: "+7 988 550-68-88", href: "tel:+79885506888" },
-                  { icon: "Clock", text: "12:00 — 02:00, без выходных" },
+                  { icon: "Clock", text: "11:00 — 03:00, без выходных" },
                 ].map((c) => (
                   <div key={c.icon} className="flex items-center gap-3">
                     <span style={{ color: "var(--gold-light)", flexShrink: 0 }}><Icon name={c.icon} size={15} fallback="MapPin" /></span>
@@ -855,7 +855,7 @@ function Contacts() {
                 {[
                   { icon: "MapPin", label: "Адрес", text: "Анапа, Набережная улица, 34" },
                   { icon: "Phone", label: "Телефон", text: "+7 988 550-68-88", href: "tel:+79885506888" },
-                  { icon: "Clock", label: "Режим работы", text: "12:00 — 02:00, без выходных" },
+                  { icon: "Clock", label: "Режим работы", text: "11:00 — 03:00, без выходных" },
                 ].map((c) => (
                   <div key={c.icon} className="flex gap-4">
                     <div
