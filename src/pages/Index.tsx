@@ -241,18 +241,8 @@ function Hero() {
           Анапа · Первая линия · У моря
         </p>
         <h1
-          className="font-brand text-8xl sm:text-9xl mb-3 animate-fade-in-up"
-          style={{
-            lineHeight: 1.1,
-            opacity: 0,
-            animationDelay: "0.25s",
-            animationFillMode: "forwards",
-            background: "linear-gradient(135deg, #1565C0 0%, #1E88E5 30%, #F9A825 65%, #FF6F00 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-            filter: "drop-shadow(0 2px 12px rgba(21,101,192,0.4))",
-          }}
+          className="font-brand text-8xl sm:text-9xl text-white mb-3 animate-fade-in-up"
+          style={{ lineHeight: 1.1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           ЛаБриз
         </h1>
