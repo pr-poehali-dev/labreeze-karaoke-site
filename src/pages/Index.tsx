@@ -258,10 +258,10 @@ function Hero() {
           style={{ opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards", maxWidth: 500 }}
         >
           <img
-            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/01dc0a4c-d460-4d10-9d7c-223a30202075.png"
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/1d0d6cc9-b112-49b9-ad33-c248f3309f74.png"
             alt="ЛаБриз"
             className="w-full"
-            style={{ filter: "drop-shadow(0 4px 20px rgba(0,80,180,0.4)) brightness(1.15)" }}
+            style={{ filter: "drop-shadow(0 2px 16px rgba(0,0,0,0.3))" }}
           />
         </div>
         <p
