@@ -833,7 +833,7 @@ function Contacts() {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div className="reveal rounded-3xl overflow-hidden shadow-xl" style={{ height: 420 }}>
             <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=37.31685%2C44.89545&z=17&l=map&pt=37.31685%2C44.89545%2Cpm2rdm~%D0%9B%D0%B0%D0%91%D1%80%D0%B8%D0%B7"
+              src="https://yandex.ru/map-widget/v1/?ll=37.31520%2C44.89860&z=17&l=map&pt=37.31520%2C44.89860%2Cpm2rdm~%D0%9B%D0%B0%D0%91%D1%80%D0%B8%D0%B7"
               width="100%"
               height="100%"
               frameBorder="0"
