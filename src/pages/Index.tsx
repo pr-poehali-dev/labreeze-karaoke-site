@@ -5,15 +5,6 @@ import Icon from "@/components/ui/icon";
 
 const EVENTS = [
   {
-    id: 1,
-    title: "Live Cover Band",
-    date: "20 июня",
-    time: "20:00",
-    image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5dbaaf80-b935-494b-816b-68c4e40539fd.jpg",
-    description: "Живые выступления любимых хитов 80–2000-х. Зажигательная атмосфера у самого моря.",
-    tag: "Живая музыка",
-  },
-  {
     id: 2,
     title: "Karaoke Night",
     date: "22 июня",
