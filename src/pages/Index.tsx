@@ -138,20 +138,16 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2">
           <img
-            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/06c0b432-0a15-44b7-8ab1-8f830beee38f.png"
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/da7add07-0d8e-42c9-a386-2cd1bb5a59d4.png"
             alt="ЛаБриз"
             className="object-contain transition-all duration-300"
             style={{
-              width: scrolled ? 48 : 56,
+              width: scrolled ? 120 : 140,
               height: scrolled ? 48 : 56,
+              mixBlendMode: "multiply",
             }}
           />
-          <span
-            className="hidden sm:block font-brand text-xl transition-colors duration-300"
-            style={{ color: scrolled ? "var(--sea)" : "white" }}
-          >
-            ЛаБриз
-          </span>
+
         </a>
 
         <ul className="hidden lg:flex items-center gap-7">
@@ -260,8 +256,8 @@ function Hero() {
           <img
             src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/da7add07-0d8e-42c9-a386-2cd1bb5a59d4.png"
             alt="ЛаБриз"
-            className="w-full drop-shadow-2xl"
-            style={{ filter: "drop-shadow(0 4px 24px rgba(0,80,180,0.35)) brightness(1.08)" }}
+            className="w-full"
+            style={{ mixBlendMode: "screen", filter: "brightness(1.1)" }}
           />
         </div>
         <p
