@@ -253,12 +253,17 @@ function Hero() {
         >
           Анапа · Первая линия · У моря
         </p>
-        <h1
-          className="font-brand text-8xl sm:text-9xl text-white mb-3 animate-fade-in-up"
-          style={{ lineHeight: 1.1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
+        <div
+          className="animate-fade-in-up mx-auto mb-3"
+          style={{ opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards", maxWidth: 480 }}
         >
-          ЛаБриз
-        </h1>
+          <img
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/da7add07-0d8e-42c9-a386-2cd1bb5a59d4.png"
+            alt="ЛаБриз"
+            className="w-full drop-shadow-2xl"
+            style={{ filter: "drop-shadow(0 4px 24px rgba(0,80,180,0.35)) brightness(1.08)" }}
+          />
+        </div>
         <p
           className="font-display text-2xl sm:text-3xl md:text-4xl italic font-light mb-5 animate-fade-in-up"
           style={{ color: "var(--gold-light)", opacity: 0, animationDelay: "0.45s", animationFillMode: "forwards" }}
