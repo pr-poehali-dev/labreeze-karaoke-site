@@ -25,7 +25,7 @@ const EVENTS = [
   {
     id: 3,
     title: "Закатный вечер",
-    date: "25 июня",
+    date: "Каждый вечер",
     time: "18:30",
     image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg",
     description: "Особый вечер с живой музыкой под открытым небом и видом на море в момент заката.",
