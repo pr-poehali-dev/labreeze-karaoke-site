@@ -463,7 +463,7 @@ function Karaoke() {
             style={{ boxShadow: "0 40px 90px rgba(26,58,92,0.15)" }}
           >
             <img
-              src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/9117d525-db65-4e47-b520-f80af6fb89ab.png"
+              src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/b681075b-8044-4f35-814f-245010736e33.png"
               alt="Живое выступление"
               className="w-full object-cover"
               style={{ height: 540 }}
