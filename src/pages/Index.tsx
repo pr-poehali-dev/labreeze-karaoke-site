@@ -517,6 +517,7 @@ const MENU_IMAGES = [
 
 function Menu() {
   const [activeImageMenu, setActiveImageMenu] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
 
   return (
     <section id="menu" style={{ backgroundColor: "var(--sea)" }} className="py-28 px-6">
@@ -548,14 +549,38 @@ function Menu() {
               </button>
             ))}
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <div
+            className="rounded-2xl overflow-hidden shadow-2xl cursor-zoom-in"
+            onClick={() => setLightbox(true)}
+          >
             <img
               src={MENU_IMAGES[0].images[activeImageMenu]}
               alt="Меню ЛаБриз"
-              className="w-full h-auto"
+              className="w-full h-auto hover:scale-[1.02] transition-transform duration-300"
               style={{ display: "block" }}
             />
           </div>
+
+          {lightbox && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              style={{ backgroundColor: "rgba(0,0,0,0.92)" }}
+              onClick={() => setLightbox(false)}
+            >
+              <button
+                className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors"
+                onClick={() => setLightbox(false)}
+              >
+                <Icon name="X" size={32} />
+              </button>
+              <img
+                src={MENU_IMAGES[0].images[activeImageMenu]}
+                alt="Меню ЛаБриз"
+                className="max-w-full max-h-full object-contain rounded-xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          )}
         </div>
 
         <p className="text-center mt-10 font-body text-sm" style={{ color: "rgba(255,255,255,0.3)" }}>
