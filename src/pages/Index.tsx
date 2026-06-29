@@ -7,7 +7,7 @@ const EVENTS = [
   {
     id: 2,
     title: "Karaoke Night",
-    date: "22 июня",
+    date: "Каждый день",
     time: "19:00",
     image: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/6b08763e-92c9-4e82-862f-d03bb2b35b8e.jpg",
     description: "Профессиональный звук, ведущий и огромная база песен. Звезда вечера — ты.",
