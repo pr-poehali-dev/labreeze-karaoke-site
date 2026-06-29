@@ -70,6 +70,10 @@ const MENU = [
 ];
 
 const GALLERY = [
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/abe6563d-6e40-44ab-b442-32be5f1c6cf4.png", alt: "Вид на ресторан снаружи", tall: false },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/e392975c-9b5d-4f3f-98e7-37333acecc61.png", alt: "Летняя терраса с закатом", tall: true },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/8083c586-bbde-408f-97af-57b7ce935101.png", alt: "Открытая терраса у моря", tall: false },
+  { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/ccf4d019-207d-4353-b038-2d1995d019ce.png", alt: "Основной зал ресторана", tall: false },
   { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg", alt: "Закат с террасы", tall: true },
   { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/8b5b213e-c203-4b8b-af5d-07fcd068a06e.jpg", alt: "Летняя терраса", tall: false },
   { src: "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5edfb41e-05ac-444b-a855-ebc3d0bf5b30.jpg", alt: "Вечерний зал", tall: false },
