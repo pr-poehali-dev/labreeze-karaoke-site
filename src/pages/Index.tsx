@@ -138,16 +138,20 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2">
           <img
-            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/da7add07-0d8e-42c9-a386-2cd1bb5a59d4.png"
+            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/06c0b432-0a15-44b7-8ab1-8f830beee38f.png"
             alt="ЛаБриз"
             className="object-contain transition-all duration-300"
             style={{
-              width: scrolled ? 120 : 140,
+              width: scrolled ? 48 : 56,
               height: scrolled ? 48 : 56,
-              mixBlendMode: "multiply",
             }}
           />
-
+          <span
+            className="hidden sm:block font-brand text-xl transition-colors duration-300"
+            style={{ color: scrolled ? "var(--sea)" : "white" }}
+          >
+            ЛаБриз
+          </span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-7">
@@ -249,17 +253,12 @@ function Hero() {
         >
           Анапа · Первая линия · У моря
         </p>
-        <div
-          className="animate-fade-in-up mx-auto mb-3"
-          style={{ opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards", maxWidth: 480 }}
+        <h1
+          className="font-brand text-8xl sm:text-9xl text-white mb-3 animate-fade-in-up"
+          style={{ lineHeight: 1.1, opacity: 0, animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          <img
-            src="https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/da7add07-0d8e-42c9-a386-2cd1bb5a59d4.png"
-            alt="ЛаБриз"
-            className="w-full"
-            style={{ mixBlendMode: "screen", filter: "brightness(1.1)" }}
-          />
-        </div>
+          ЛаБриз
+        </h1>
         <p
           className="font-display text-2xl sm:text-3xl md:text-4xl italic font-light mb-5 animate-fade-in-up"
           style={{ color: "var(--gold-light)", opacity: 0, animationDelay: "0.45s", animationFillMode: "forwards" }}
