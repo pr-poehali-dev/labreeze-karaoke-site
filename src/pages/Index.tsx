@@ -220,7 +220,7 @@ function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-[10s]"
         style={{
-          backgroundImage: `url(https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/3a2571a2-fe22-492f-8fb3-f546f510e5d1.jpg)`,
+          backgroundImage: `url(https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/f6145d1d-7f55-4415-beda-d559b7ae2546.png)`,
         }}
       />
       <div
