@@ -630,218 +630,46 @@ function Gallery() {
 // ─── BOOKING ─────────────────────────────────────────────────────────────────
 
 function Booking() {
-  const [form, setForm] = useState({ name: "", phone: "", date: "", guests: "2", comment: "" });
-  const [callForm, setCallForm] = useState({ name: "", phone: "", time: "" });
-  const [submitted, setSubmitted] = useState(false);
-  const [callSubmitted, setCallSubmitted] = useState(false);
-  const [showCallForm, setShowCallForm] = useState(false);
-
-  const inputStyle = {
-    borderColor: "var(--border)",
-    backgroundColor: "var(--cream)",
-    color: "#1a2533",
-    width: "100%",
-    borderRadius: 12,
-    padding: "12px 16px",
-    fontFamily: "'Golos Text', sans-serif",
-    fontSize: 14,
-    border: "1px solid var(--border)",
-    outline: "none",
-  };
-
   return (
     <section id="booking" style={{ backgroundColor: "var(--sand)" }} className="py-28 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16 reveal">
+      <div className="max-w-3xl mx-auto text-center">
+        <div className="reveal">
           <p className="font-body text-xs tracking-[0.35em] uppercase mb-3" style={{ color: "var(--gold)" }}>
             Бронирование
           </p>
           <h2 className="font-display text-5xl sm:text-6xl font-light" style={{ color: "var(--sea)" }}>
-            Забронировать стол
+            Ваш идеальный вечер начинается здесь
           </h2>
           <div className="gold-divider mx-auto mt-6" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
-          {/* Main form */}
-          <div
-            className="reveal bg-white rounded-3xl p-8"
-            style={{ boxShadow: "0 20px 70px rgba(26,58,92,0.1)" }}
-          >
-            {submitted ? (
-              <div className="text-center py-10">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
-                  style={{ backgroundColor: "var(--gold)", color: "#1a2533" }}
-                >
-                  <Icon name="Check" size={28} />
-                </div>
-                <h3 className="font-display text-3xl mb-2" style={{ color: "var(--sea)" }}>Заявка принята!</h3>
-                <p className="font-body text-sm" style={{ color: "#7a8a9a" }}>
-                  Мы свяжемся с вами в течение 30 минут для подтверждения.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-5">
-                <h3 className="font-display text-2xl mb-2" style={{ color: "var(--sea)" }}>Ваши данные</h3>
-                {[
-                  { key: "name", label: "Имя", type: "text", placeholder: "Ваше имя" },
-                  { key: "phone", label: "Телефон", type: "tel", placeholder: "+7 ___ ___-__-__" },
-                  { key: "date", label: "Дата визита", type: "date", placeholder: "" },
-                ].map((f) => (
-                  <div key={f.key}>
-                    <label className="font-body text-xs font-semibold mb-1.5 block" style={{ color: "var(--sea)" }}>
-                      {f.label}
-                    </label>
-                    <input
-                      type={f.type}
-                      placeholder={f.placeholder}
-                      required
-                      value={form[f.key as keyof typeof form]}
-                      onChange={(e) => setForm({ ...form, [f.key]: e.target.value })}
-                      style={inputStyle}
-                    />
-                  </div>
-                ))}
-                <div>
-                  <label className="font-body text-xs font-semibold mb-1.5 block" style={{ color: "var(--sea)" }}>
-                    Количество гостей
-                  </label>
-                  <select
-                    value={form.guests}
-                    onChange={(e) => setForm({ ...form, guests: e.target.value })}
-                    style={inputStyle}
-                  >
-                    {["1", "2", "3", "4", "5", "6", "7", "8+"].map((n) => (
-                      <option key={n} value={n}>{n} {n === "8+" ? "и более человек" : "чел."}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="font-body text-xs font-semibold mb-1.5 block" style={{ color: "var(--sea)" }}>
-                    Комментарий
-                  </label>
-                  <textarea
-                    placeholder="Особые пожелания, повод, предпочтения..."
-                    value={form.comment}
-                    onChange={(e) => setForm({ ...form, comment: e.target.value })}
-                    rows={3}
-                    style={{ ...inputStyle, resize: "none" }}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl font-body font-semibold text-base transition-all duration-300 hover:opacity-90 hover:scale-[1.01]"
-                  style={{ backgroundColor: "var(--sea)", color: "white" }}
-                >
-                  Забронировать стол
-                </button>
-              </form>
-            )}
-          </div>
+        <div className="reveal delay-100 mt-8 space-y-4">
+          <p className="font-body text-base" style={{ color: "#4a5a6a" }}>
+            Чтобы забронировать столик, просто свяжитесь с нами любым удобным способом.
+          </p>
+          <p className="font-body text-base" style={{ color: "#4a5a6a" }}>
+            Мы подберем лучшее место, расскажем о программе вечера и подтвердим бронь за несколько минут.
+          </p>
+        </div>
 
-          {/* Right column */}
-          <div className="reveal delay-200 space-y-6">
-            <div
-              className="rounded-3xl p-7 text-white"
-              style={{ backgroundColor: "var(--sea)" }}
+        <div className="reveal delay-200 flex flex-wrap justify-center gap-4 mt-12">
+          {[
+            { label: "Позвонить", href: "tel:+79885506888", icon: "Phone", bg: "var(--sea)" },
+            { label: "Telegram", href: "https://t.me/karaoke_anapa", icon: "Send", bg: "#229ED9" },
+            { label: "MAX", href: "https://max.ru/labriz_anapa", icon: "MessageSquare", bg: "#FF6B35" },
+          ].map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target={s.href.startsWith("tel:") ? undefined : "_blank"}
+              rel={s.href.startsWith("tel:") ? undefined : "noopener noreferrer"}
+              className="flex items-center gap-2.5 px-8 py-4 rounded-xl font-body text-base font-semibold text-white transition-all duration-300 hover:opacity-90 hover:scale-105"
+              style={{ backgroundColor: s.bg }}
             >
-              <h3 className="font-display text-2xl font-light mb-5">Контакты</h3>
-              <div className="space-y-4">
-                {[
-                  { icon: "MapPin", text: "Анапа, Набережная улица, 34" },
-                  { icon: "Phone", text: "+7 988 550-68-88", href: "tel:+79885506888" },
-                  { icon: "Clock", text: "11:00 — 03:00, без выходных" },
-                ].map((c) => (
-                  <div key={c.icon} className="flex items-center gap-3">
-                    <span style={{ color: "var(--gold-light)", flexShrink: 0 }}><Icon name={c.icon} size={15} fallback="MapPin" /></span>
-                    {c.href ? (
-                      <a href={c.href} className="font-body text-sm hover:opacity-75">{c.text}</a>
-                    ) : (
-                      <span className="font-body text-sm">{c.text}</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-2.5 mt-6">
-                {[
-                  { label: "WhatsApp", href: "https://wa.me/79885506888", icon: "MessageCircle", bg: "#25D366" },
-                  { label: "Telegram", href: "https://t.me/karaoke_anapa", icon: "Send", bg: "#229ED9" },
-                  { label: "MAX", href: "https://max.ru/labriz_anapa", icon: "MessageSquare", bg: "#FF6B35" },
-                ].map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl font-body text-sm font-medium transition-all hover:scale-105"
-                    style={{ backgroundColor: s.bg, color: "white" }}
-                  >
-                    <Icon name={s.icon} size={14} fallback="MessageCircle" />
-                    {s.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Callback */}
-            <div
-              className="bg-white rounded-3xl p-6"
-              style={{ boxShadow: "0 10px 40px rgba(26,58,92,0.08)" }}
-            >
-              {callSubmitted ? (
-                <div className="text-center py-4">
-                  <span className="flex justify-center" style={{ color: "var(--gold)" }}><Icon name="PhoneCall" size={36} /></span>
-                  <p className="font-display text-xl mt-2" style={{ color: "var(--sea)" }}>Перезвоним скоро!</p>
-                  <p className="font-body text-xs mt-1" style={{ color: "#7a8a9a" }}>Обычно в течение 15 минут</p>
-                </div>
-              ) : !showCallForm ? (
-                <div>
-                  <p className="font-body text-sm mb-4 text-center" style={{ color: "#7a8a9a" }}>
-                    Хотите, чтобы мы перезвонили?
-                  </p>
-                  <button
-                    onClick={() => setShowCallForm(true)}
-                    className="w-full py-3.5 rounded-xl font-body font-semibold text-sm transition-all hover:opacity-90 hover:scale-[1.01] flex items-center justify-center gap-2"
-                    style={{ backgroundColor: "var(--gold)", color: "#1a2533" }}
-                  >
-                    <Icon name="PhoneCall" size={15} />
-                    Заказать обратный звонок
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={(e) => { e.preventDefault(); setCallSubmitted(true); }} className="space-y-4">
-                  <h3 className="font-display text-xl mb-1" style={{ color: "var(--sea)" }}>Обратный звонок</h3>
-                  {[
-                    { key: "name", label: "Имя", type: "text", placeholder: "Ваше имя" },
-                    { key: "phone", label: "Телефон", type: "tel", placeholder: "+7 ___ ___-__-__" },
-                    { key: "time", label: "Удобное время", type: "text", placeholder: "Например: с 14 до 17" },
-                  ].map((f) => (
-                    <div key={f.key}>
-                      <label className="font-body text-xs font-semibold mb-1 block" style={{ color: "var(--sea)" }}>
-                        {f.label}
-                      </label>
-                      <input
-                        type={f.type}
-                        placeholder={f.placeholder}
-                        required
-                        value={callForm[f.key as keyof typeof callForm]}
-                        onChange={(e) => setCallForm({ ...callForm, [f.key]: e.target.value })}
-                        style={inputStyle}
-                      />
-                    </div>
-                  ))}
-                  <button
-                    type="submit"
-                    className="w-full py-3 rounded-xl font-body font-semibold text-sm transition-all hover:opacity-90"
-                    style={{ backgroundColor: "var(--sea)", color: "white" }}
-                  >
-                    Отправить
-                  </button>
-                </form>
-              )}
-            </div>
-          </div>
+              <Icon name={s.icon} size={18} fallback="MessageCircle" />
+              {s.label}
+            </a>
+          ))}
         </div>
       </div>
     </section>
