@@ -517,9 +517,31 @@ const MENU_IMAGES = [
   },
 ];
 
+const DISH_PHOTOS = [
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/a4b7f9b9-5c0d-49ac-a9f3-75fc0566f708.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/181397b4-ef9d-4cdd-aa9b-0f525bed7363.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/408390c3-d81c-4e55-9de1-023627945a72.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/31034a8e-4104-4ec6-80ce-907d75fe28a0.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/a5a178e3-9ba4-4f35-83eb-980a7f98722d.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/f45d81e8-320a-4556-a2a9-757e6909c814.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/e4eb0bef-2846-46b9-9c0c-07409a484ae5.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/33ee6ef0-c802-4b55-9950-5314633e6837.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/521a83e9-0525-4025-80c8-cbbeb82e8df5.jpeg",
+  "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/9fb333f5-a5c6-4d1c-b503-3bd77c3d4024.jpeg",
+];
+
+const MENU_TABS = ["Основное меню", "Пицца и детское", "Барное меню", "Коктейли и напитки", "Наши блюда"];
+
 function Menu() {
   const [activeImageMenu, setActiveImageMenu] = useState(0);
   const [lightbox, setLightbox] = useState(false);
+  const [lightboxSrc, setLightboxSrc] = useState("");
+  const isDishesTab = activeImageMenu === MENU_TABS.length - 1;
+
+  const openLightbox = (src: string) => {
+    setLightboxSrc(src);
+    setLightbox(true);
+  };
 
   return (
     <section id="menu" style={{ backgroundColor: "var(--sea)" }} className="py-28 px-6">
@@ -535,8 +557,8 @@ function Menu() {
         </div>
 
         <div className="reveal">
-          <div className="flex justify-center gap-3 mb-8">
-            {["Основное меню", "Пицца и детское", "Барное меню", "Коктейли и напитки"].map((label, i) => (
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {MENU_TABS.map((label, i) => (
               <button
                 key={i}
                 onClick={() => setActiveImageMenu(i)}
@@ -551,17 +573,37 @@ function Menu() {
               </button>
             ))}
           </div>
-          <div
-            className="rounded-2xl overflow-hidden shadow-2xl cursor-zoom-in"
-            onClick={() => setLightbox(true)}
-          >
-            <img
-              src={MENU_IMAGES[0].images[activeImageMenu]}
-              alt="Меню ЛаБриз"
-              className="w-full h-auto hover:scale-[1.02] transition-transform duration-300"
-              style={{ display: "block" }}
-            />
-          </div>
+
+          {isDishesTab ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {DISH_PHOTOS.map((src, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl overflow-hidden shadow-xl cursor-zoom-in"
+                  onClick={() => openLightbox(src)}
+                >
+                  <img
+                    src={src}
+                    alt={`Блюдо ЛаБриз ${i + 1}`}
+                    className="w-full h-full object-cover hover:scale-[1.05] transition-transform duration-300"
+                    style={{ aspectRatio: "1 / 1", display: "block" }}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              className="rounded-2xl overflow-hidden shadow-2xl cursor-zoom-in"
+              onClick={() => openLightbox(MENU_IMAGES[0].images[activeImageMenu])}
+            >
+              <img
+                src={MENU_IMAGES[0].images[activeImageMenu]}
+                alt="Меню ЛаБриз"
+                className="w-full h-auto hover:scale-[1.02] transition-transform duration-300"
+                style={{ display: "block" }}
+              />
+            </div>
+          )}
 
           {lightbox && (
             <div
@@ -576,7 +618,7 @@ function Menu() {
                 <Icon name="X" size={32} />
               </button>
               <img
-                src={MENU_IMAGES[0].images[activeImageMenu]}
+                src={lightboxSrc}
                 alt="Меню ЛаБриз"
                 className="max-w-full max-h-full object-contain rounded-xl"
                 onClick={(e) => e.stopPropagation()}
