@@ -511,6 +511,8 @@ const MENU_IMAGES = [
     images: [
       "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/5d12ebeb-dd54-4af4-9d1f-a21a76b9c330.jpeg",
       "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/823712a2-62a7-42d0-b4a8-807f74eff3dd.jpeg",
+      "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/15a70eba-217f-46ce-8503-8ab2ddea4b32.jpeg",
+      "https://cdn.poehali.dev/projects/3fa0fa67-7615-44dd-ac91-dea1559fd9c7/bucket/bc83421a-3541-46d6-9090-38d5450de448.jpeg",
     ],
   },
 ];
@@ -534,7 +536,7 @@ function Menu() {
 
         <div className="reveal">
           <div className="flex justify-center gap-3 mb-8">
-            {["Основное меню", "Пицца и детское"].map((label, i) => (
+            {["Основное меню", "Пицца и детское", "Барное меню", "Коктейли и напитки"].map((label, i) => (
               <button
                 key={i}
                 onClick={() => setActiveImageMenu(i)}
