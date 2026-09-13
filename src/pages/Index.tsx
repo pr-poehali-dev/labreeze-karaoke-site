@@ -699,8 +699,7 @@ function Booking() {
         <div className="reveal delay-200 flex flex-wrap justify-center gap-4 mt-12">
           {[
             { label: "Позвонить", href: "tel:+79885506888", icon: "Phone", bg: "var(--sea)" },
-            { label: "Telegram", href: "https://t.me/karaoke_anapa", icon: "Send", bg: "#229ED9" },
-            { label: "MAX", href: "https://max.ru/labriz_anapa", icon: "MessageSquare", bg: "#FF6B35" },
+            { label: "ВКонтакте", href: "https://vk.me/labrizanapa", icon: "Send", bg: "#0077FF" },
           ].map((s) => (
             <a
               key={s.label}
