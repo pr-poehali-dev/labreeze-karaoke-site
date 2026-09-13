@@ -791,8 +791,6 @@ function Contacts() {
                   {[
                     { label: "ВКонтакте", href: "https://vk.com/labrizanapa", icon: "Users", bg: "#0077FF" },
                     { label: "Telegram", href: "https://t.me/karaoke_anapa", icon: "Send", bg: "#229ED9" },
-                    { label: "WhatsApp", href: "https://wa.me/79885506888", icon: "MessageCircle", bg: "#25D366" },
-                    { label: "MAX", href: "https://max.ru/labriz_anapa", icon: "MessageSquare", bg: "#FF6B35" },
                   ].map((s) => (
                     <a
                       key={s.label}
